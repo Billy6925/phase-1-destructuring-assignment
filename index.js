@@ -1,6 +1,53 @@
 const farmAnimals = 'cow horse sheep pig chicken';
+const animalSounds = "cow:moo,horse:neigh,sheep:baa,pig:oink,chicken:cluck";
 
-const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// Convert the string into an array of sounds
+const animalSoundsArray = animalSounds.split(',');
+
+// Destructure the array to get each sound string
+const [cowSound, horseSound, sheepSound, pigSound, chickenSound] = animalSoundsArray;
+
+// Extract the sounds from each string
+const moo = cowSound.split(':')[0];
+const neigh = horseSound.split(':')[0];
+const baa = sheepSound.split(':')[0];
+const oink = pigSound.split(':')[0];
+const cluck = chickenSound.split(':')[0];
+
+
+const animalNames = "cow:bessie, sheep:dolly, pig:babe, chicken:little";
+
+// Convert the string into an array of name pairs
+const animalNamesArray = animalNames.split(', ');
+
+// Destructure the array to get each name pair string
+const [cowName, sheepName, pigName, chickenName] = animalNamesArray;
+
+// Extract the animal names from each string
+var bessie = cowName.split(':')[0];
+var dolly = sheepName.split(':')[0];
+var babe = pigName.split(':')[0];
+var little = chickenName.split(':')[0];
+
+
+const animalColors = "cow:blackAndWhite, sheep:black, pig:pink";
+const animalColorsArray = animalColors.split(',');
+const [cowColor, sheepColor, pigColor] = animalColorsArray;
+var blackAndWhite = cowColor.split(':')[0].trim();
+var black = sheepColor.split(':')[0].trim();
+var pink = pigColor.split(':')[0].trim();
+
+
+const rainbowColors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+const [red, orange, yellow, green, blue, indigo, violet] = rainbowColors;
+
+
+const rainbowColorInitials = ['red','orange','yellow','green','blue','violet'];
+const [r,o,y,g,b,v] = rainbowColorInitials;
+
+const indigoColor = ['indigo'];
+const [indg] = indigoColor;
+
 
 const muppet = {
   muppetName: 'Miss Piggy',
@@ -24,6 +71,24 @@ const nestedMuppet = {
   nestedJob: 'Host of The Muppet Show',
   nestedPartner: 'Miss Piggy'
 };
+
+
+const assignMuppet = {
+  muppetName: "Miss Piggy",
+  color: "pink",
+  song: "Never Before, Never Again",
+  job:"Cast member of The Muppet Show",
+  partner:"Kermit"
+}
+const {muppetName, color, song, job,partner} = assignMuppet;
+
+const Kermit = {
+  song2:"Moving Right Along",
+  song4:"I Hope That Something Better Comes Along",
+  nestedJob:"Host of The Muppet Show",
+  nestedPartner:"Miss Piggy"
+}
+const {song2, song4, nestedJob, nestedPartner} = Kermit;
 
 // Strings
 
